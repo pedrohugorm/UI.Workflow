@@ -1,0 +1,111 @@
+﻿
+//Baseado na pesquisa que fiz no dribbble
+//https://dribbble.com/pedrohugorm/buckets/277692-Workflow-UI
+
+$color_black: #000;
+$color_dark_gray: #2f4050;
+$color_light_gray: #a7b1c2;
+$color_yellow_light_workflow: #FFCE54;
+$color_yellow_dark_workflow: #F6BB42;
+$color_green_light_workflow: #A0D468;
+$color_green_dark_workflow: #8CC152;
+
+@mixin uiWorkflow($size, $topBottomPadding, $align, $color_done, $color_done_icon, $color_current, $color_current_icon, $color_inactive, $color_inactive_icon, $color_text) {
+
+    $half_size: $size / 2;
+    $text_size: ($half_size / 4) + ($half_size * .1);
+    $icon_size: $half_size * .75;
+    $divider_size: ($half_size / 8);
+    $divider_style: dotted;
+    $divider_margin: 10px;
+
+    padding: 0;
+    padding-top: $topBottomPadding;
+    padding-bottom: $topBottomPadding;
+    text-align: $align;
+    list-style: none;
+
+    li {
+        display: inline-block;
+
+        a {
+            &:hover {
+                opacity: .8;
+            }
+        }
+
+        &.divider {
+            width: $half_size;
+            height: $divider_size;
+            border-bottom: $divider_size $divider_style $color_inactive;
+            margin-left: $divider_margin;
+            margin-right: $divider_margin;
+            vertical-align: top;
+            position: relative;
+            top: $half_size - ($divider_size / 2);
+            
+            content: " ";
+
+            &.done {
+                
+                border-bottom-color: $color_done;
+            }
+        }
+
+        &.item {
+            text-align: center;
+            vertical-align: top;
+
+            &.done {
+                i {
+                    background-color: $color_done;
+                    color: $color_done_icon;
+                }
+            }
+
+            &.current {
+                i {
+                    background-color: $color_current;
+                    color: $color_current_icon;
+                }
+            }
+
+            i {
+                color: $color_inactive_icon;
+                display: block;
+                font-size: $icon_size;
+                background-color: $color_inactive;
+
+                padding-top: ($half_size / 2) + ($half_size / 8);
+                height: $half_size * 2;
+                width: $half_size * 2;
+                border-radius: $half_size;
+            }
+
+            span {
+                font-size: $text_size;
+                display: inline-block;
+                margin-top: 10px;
+                color: $color_text;
+                text-transform: uppercase;
+                font-weight: bold;
+                width: $size;
+            }
+        }
+    }
+}
+
+.status-workflow-md {
+    @include uiWorkflow(
+        80px,
+        20px,
+        center,
+        $color_green_light_workflow,
+        $color_green_dark_workflow,
+        $color_yellow_light_workflow,
+        $color_yellow_dark_workflow,
+        $color_light_gray,
+        $color_dark_gray,
+        $color_black
+    );
+}

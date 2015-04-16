@@ -1,0 +1,50 @@
+﻿.status-workflow-md {
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  list-style: none; }
+  .status-workflow-md li {
+    display: inline-block; }
+    .status-workflow-md li a:hover {
+      opacity: 0.8; }
+    .status-workflow-md li.divider {
+      width: 40px;
+      height: 5px;
+      border-bottom: 5px dotted #a7b1c2;
+      margin-left: 10px;
+      margin-right: 10px;
+      vertical-align: top;
+      position: relative;
+      top: 37.5px;
+      content: " "; }
+      .status-workflow-md li.divider.done {
+        border-bottom-color: #A0D468; }
+    .status-workflow-md li.item {
+      text-align: center;
+      vertical-align: top; }
+      .status-workflow-md li.item.done i {
+        background-color: #A0D468;
+        color: #8CC152; }
+      .status-workflow-md li.item.current i {
+        background-color: #FFCE54;
+        color: #F6BB42; }
+      .status-workflow-md li.item i {
+        color: #2f4050;
+        display: block;
+        font-size: 30px;
+        background-color: #a7b1c2;
+        padding-top: 25px;
+        height: 80px;
+        width: 80px;
+        border-radius: 40px; }
+      .status-workflow-md li.item span {
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 10px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 80px; }
+
+/*# sourceMappingURL=uiWorkflow.css.map */
