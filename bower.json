@@ -1,0 +1,20 @@
+{
+  "name": "UI.Workflow",
+  "version": "1.0.0",
+  "authors": [
+    "Pedro Matos <pedrohugorm@gmail.com>"
+  ],
+  "description": "UI Workflow KIT",
+  "keywords": [
+    "UI",
+    "Workflow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
