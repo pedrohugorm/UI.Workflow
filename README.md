@@ -1,4 +1,4 @@
 # UI.Workflow
 UI Workflow KIT
 
-Example [here](example/example1.html)
+Example [here](../../tree/master/example/example1.html)
