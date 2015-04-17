@@ -9,7 +9,7 @@ $color_light_gray: #a7b1c2;
 $color_yellow_light_workflow: #FFCE54;
 $color_yellow_dark_workflow: #F6BB42;
 $color_green_light_workflow: #A0D468;
-$color_green_dark_workflow: #8CC152;
+$color_green_dark_workflow: #8CC152;  
 
 @mixin hoverAnimation {
     -moz-transition-delay: 0;
@@ -30,14 +30,49 @@ $color_green_dark_workflow: #8CC152;
     transition-timing-function: ease-in;
 }
 
-@mixin uiWorkflow($size, $topBottomPadding, $align, $color_done, $color_done_icon, $color_current, $color_current_icon, $color_inactive, $color_inactive_icon, $color_text) {
+@mixin uiWorkflow(
+    $size: 80px, 
+    $topBottomPadding: 20px, 
+    $align: center,     
+    $color_done_background: $color_green_light_workflow, 
+    $color_done_border: $color_green_light_workflow, 
+    $color_done_icon: $color_dark_gray, 
+    $border_done_style: solid,    
+    $color_current_background: $color_yellow_light_workflow, 
+    $color_current_border: $color_yellow_light_workflow,
+    $color_current_icon: $color_dark_gray, 
+    $border_current_style: solid,
+    $color_inactive_background: transparent, 
+    $color_inactive_border: $color_light_gray,
+    $color_inactive_icon: $color_light_gray, 
+    $border_inactive_style: dashed,
+    $color_done_hover_background: $color_light_gray,
+    $color_done_hover_border: $color_light_gray,
+    $color_done_hover_icon: $color_dark_gray,
+    $border_done_hover_style: solid,
+    $color_inactive_hover_background: $color_light_gray,
+    $color_inactive_hover_border: $color_light_gray,
+    $color_inactive_hover_icon: $color_dark_gray,
+    $border_inactive_hover_style: solid,
+    $color_current_hover_background: $color_light_gray,
+    $color_current_hover_border: $color_light_gray,
+    $color_current_hover_icon: $color_dark_gray,
+    $border_current_hover_style: solid,
+    $border_item_size: 1px,
+    $divider_margin: 10px,
+    $divider_style: dotted,
+    $color_text: $color_dark_gray,
+    $item_hover_opacity: .8,
+    $text_transform: uppercase,
+    $text_margin: 10px,
+    $text_font_weight: bold) {
 
     $half_size: $size / 2;
     $text_size: ($half_size / 4) + ($half_size * .1);
     $icon_size: $half_size * .75;
     $divider_size: ($half_size / 8);
-    $divider_style: dotted;
-    $divider_margin: 10px;
+    $divider_style: $divider_style;
+    $divider_margin: $divider_margin;
 
     padding: 0;
     padding-top: $topBottomPadding;
@@ -51,16 +86,32 @@ $color_green_dark_workflow: #8CC152;
         a {
             &:hover {
                 text-decoration: none;
-                opacity: .8;
+                opacity: $item_hover_opacity;
                 @include hoverAnimation;
 
                 i {
-                    opacity: .8;
+                    opacity: $item_hover_opacity;
                     @include hoverAnimation;
 
-                    color: $color_inactive_icon;
-                    background-color: $color_light_gray;
-                    border: 1px solid $color_light_gray;
+                    color: $color_inactive_hover_icon;
+                    background-color: $color_inactive_hover_background;
+                    border: $border_item_size $border_inactive_hover_style $color_inactive_hover_border;
+                }
+            }
+
+            &.done {
+                &:hover {
+                    color: $color_done_hover_icon;
+                    background-color: $color_done_hover_background;
+                    border: $border_item_size $border_done_hover_style $color_done_hover_border;
+                }
+            }
+
+            &.current {
+                &:hover {
+                    color: $color_current_hover_icon;
+                    background-color: $color_current_hover_background;
+                    border: $border_item_size $border_current_hover_style $color_light_gray;
                 }
             }
         }
@@ -68,7 +119,7 @@ $color_green_dark_workflow: #8CC152;
         &.divider {
             width: $half_size;
             height: $divider_size;
-            border-bottom: $divider_size $divider_style $color_inactive;
+            border-bottom: $divider_size $divider_style $color_inactive_border;
             margin-left: $divider_margin;
             margin-right: $divider_margin;
             vertical-align: top;
@@ -79,7 +130,7 @@ $color_green_dark_workflow: #8CC152;
 
             &.done {
                 
-                border-bottom-color: $color_done;
+                border-bottom-color: $color_done_border;
             }
         }
 
@@ -89,26 +140,26 @@ $color_green_dark_workflow: #8CC152;
 
             &.done {
                 i {
-                    background-color: $color_done;
+                    background-color: $color_done_background;
                     color: $color_done_icon;
-                    border: 1px solid $color_done;
+                    border: $border_item_size $border_done_style $color_done_border;
                 }
             }
 
             &.current {
                 i {
-                    background-color: $color_current;
+                    background-color: $color_current_background;
                     color: $color_current_icon;
-                    border: 1px solid $color_current;
+                    border: $border_item_size $border_current_style $color_current_border;
                 }
             } 
 
             i {
-                color: $color_inactive;
+                color: $color_inactive_icon;
                 display: block;
                 font-size: $icon_size;
-                background-color: transparent;
-                border: 1px dashed $color_inactive;
+                background-color: $color_inactive_background;
+                border: $border_item_size $border_inactive_style $color_inactive_border;
 
                 padding-top: ($half_size / 2) + ($half_size / 8);
                 height: $half_size * 2;
@@ -119,27 +170,16 @@ $color_green_dark_workflow: #8CC152;
             span {
                 font-size: $text_size;
                 display: inline-block;
-                margin-top: 10px;
+                margin-top: $text_margin;
                 color: $color_text;
-                text-transform: uppercase;
-                font-weight: bold;
+                text-transform: $text_transform;
+                font-weight: $text_font_weight;
                 width: $size;
             }
         }
     }
-}
+} 
 
 .status-workflow-md {
-    @include uiWorkflow(
-        80px,
-        20px,
-        center,
-        $color_green_light_workflow,
-        $color_green_dark_workflow,
-        $color_yellow_light_workflow,
-        $color_yellow_dark_workflow,
-        $color_light_gray,
-        $color_dark_gray,
-        $color_dark_gray
-    );
+    @include uiWorkflow();  
 }

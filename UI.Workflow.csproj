@@ -210,6 +210,12 @@
     <Content Include="bower_components\jquery\src\var\support.js" />
     <Content Include="bower_components\jquery\src\var\toString.js" />
     <Content Include="bower_components\jquery\src\wrap.js" />
+    <Content Include="Content\test.css">
+      <DependentUpon>test.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\test.min.css">
+      <DependentUpon>test.css</DependentUpon>
+    </Content>
     <Content Include="Content\uiWorkflow.css">
       <DependentUpon>uiWorkflow.scss</DependentUpon>
     </Content>
@@ -358,6 +364,10 @@
     <Content Include="bower_components\fontawesome\scss\_rotated-flipped.scss" />
     <Content Include="bower_components\fontawesome\scss\_stacked.scss" />
     <Content Include="bower_components\fontawesome\scss\_variables.scss" />
+    <Content Include="Content\test.scss" />
+    <Content Include="Content\test.css.map">
+      <DependentUpon>test.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
