@@ -11,6 +11,25 @@ $color_yellow_dark_workflow: #F6BB42;
 $color_green_light_workflow: #A0D468;
 $color_green_dark_workflow: #8CC152;
 
+@mixin hoverAnimation {
+    -moz-transition-delay: 0;
+    -o-transition-delay: 0;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -moz-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+}
+
 @mixin uiWorkflow($size, $topBottomPadding, $align, $color_done, $color_done_icon, $color_current, $color_current_icon, $color_inactive, $color_inactive_icon, $color_text) {
 
     $half_size: $size / 2;
@@ -31,7 +50,14 @@ $color_green_dark_workflow: #8CC152;
 
         a {
             &:hover {
+                text-decoration: none;
                 opacity: .8;
+                @include hoverAnimation;
+
+                i {
+                    opacity: .8;
+                    @include hoverAnimation;
+                }
             }
         }
 
