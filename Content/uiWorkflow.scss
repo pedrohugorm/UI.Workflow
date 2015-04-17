@@ -129,8 +129,8 @@ $color_green_dark_workflow: #8CC152;
             content: " ";
 
             &.done {
-                
                 border-bottom-color: $color_done_border;
+                border-bottom-style: $border_done_style;
             }
         }
 

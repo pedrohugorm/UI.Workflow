@@ -65,7 +65,8 @@
       top: 37.5px;
       content: " "; }
       .status-workflow-md li.divider.done {
-        border-bottom-color: #A0D468; }
+        border-bottom-color: #A0D468;
+        border-bottom-style: solid; }
     .status-workflow-md li.item {
       text-align: center;
       vertical-align: top; }
