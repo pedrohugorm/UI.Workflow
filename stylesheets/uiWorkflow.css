@@ -1,0 +1,100 @@
+﻿.status-workflow-md {
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  list-style: none; }
+  .status-workflow-md li {
+    display: inline-block; }
+    .status-workflow-md li a:hover {
+      text-decoration: none;
+      opacity: 0.8;
+      -moz-transition-delay: 0;
+      -o-transition-delay: 0;
+      -webkit-transition-delay: 0;
+      transition-delay: 0;
+      -moz-transition-duration: 0.1s;
+      -o-transition-duration: 0.1s;
+      -webkit-transition-duration: 0.1s;
+      transition-duration: 0.1s;
+      -moz-transition-property: all;
+      -o-transition-property: all;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -moz-transition-timing-function: ease-in;
+      -o-transition-timing-function: ease-in;
+      -webkit-transition-timing-function: ease-in;
+      transition-timing-function: ease-in; }
+      .status-workflow-md li a:hover i {
+        opacity: 0.8;
+        -moz-transition-delay: 0;
+        -o-transition-delay: 0;
+        -webkit-transition-delay: 0;
+        transition-delay: 0;
+        -moz-transition-duration: 0.1s;
+        -o-transition-duration: 0.1s;
+        -webkit-transition-duration: 0.1s;
+        transition-duration: 0.1s;
+        -moz-transition-property: all;
+        -o-transition-property: all;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -moz-transition-timing-function: ease-in;
+        -o-transition-timing-function: ease-in;
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        color: #2f4050;
+        background-color: #a7b1c2;
+        border: 1px solid #a7b1c2; }
+    .status-workflow-md li a.done:hover {
+      color: #2f4050;
+      background-color: #a7b1c2;
+      border: 1px solid #a7b1c2; }
+    .status-workflow-md li a.current:hover {
+      color: #2f4050;
+      background-color: #a7b1c2;
+      border: 1px solid #a7b1c2; }
+    .status-workflow-md li.divider {
+      width: 40px;
+      height: 5px;
+      border-bottom: 5px dotted #a7b1c2;
+      margin-left: 10px;
+      margin-right: 10px;
+      vertical-align: top;
+      position: relative;
+      top: 37.5px;
+      content: " "; }
+      .status-workflow-md li.divider.done {
+        border-bottom-color: #A0D468;
+        border-bottom-style: solid; }
+    .status-workflow-md li.item {
+      text-align: center;
+      vertical-align: top; }
+      .status-workflow-md li.item.done i {
+        background-color: #A0D468;
+        color: #2f4050;
+        border: 1px solid #A0D468; }
+      .status-workflow-md li.item.current i {
+        background-color: #FFCE54;
+        color: #2f4050;
+        border: 1px solid #FFCE54; }
+      .status-workflow-md li.item i {
+        color: #a7b1c2;
+        display: block;
+        font-size: 30px;
+        background-color: transparent;
+        border: 1px dashed #a7b1c2;
+        padding-top: 25px;
+        height: 80px;
+        width: 80px;
+        border-radius: 40px; }
+      .status-workflow-md li.item span {
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 10px;
+        color: #2f4050;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 80px; }
+
+/*# sourceMappingURL=uiWorkflow.css.map */
