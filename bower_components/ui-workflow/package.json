@@ -1,0 +1,26 @@
+{
+  "name": "UI.Workflow",
+  "version": "1.0.0",
+  "description": "UI Workflow KIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UI",
+    "Workflow"
+  ],
+  "author": "Pedro Matos <pedrohugorm@gmail.com>",
+  "license": "ISC",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedrohugorm/UI.Workflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pedrohugorm/UI.Workflow/issues"
+  },
+  "homepage": "https://github.com/pedrohugorm/UI.Workflow"
+}

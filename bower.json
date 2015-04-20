@@ -1,0 +1,20 @@
+{
+  "name": "UI.WorkflowPage",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pedrohugorm/UI.Workflow",
+  "authors": [
+    "Pedro Matos <pedrohugorm@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ui-workflow": "*"
+  }
+}
